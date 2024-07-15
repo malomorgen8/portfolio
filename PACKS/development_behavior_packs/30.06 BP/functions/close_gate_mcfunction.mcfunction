@@ -1,0 +1,1 @@
+event entity @e[type=bridge:animated_gate] close_gate

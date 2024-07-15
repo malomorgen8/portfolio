@@ -1,0 +1,52 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Matija Lazovic"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.23"
+			],
+			"dash": [
+				"github:bridge-core/dash-compiler#8fa35c73292f6382747d0f411fca26431a6d2c8e"
+			]
+		}
+	},
+	"header": {
+		"name": "30.06",
+		"description": "developer test 2",
+		"min_engine_version": [
+			1,
+			21,
+			0
+		],
+		"uuid": "5bf937a7-05e2-4079-9dfc-c0886d763d06",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "13a012a5-1f38-40c4-8e3f-8a201f6b1cb3",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "dca31b1f-1a71-4644-8c63-9516c5a6f466",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}

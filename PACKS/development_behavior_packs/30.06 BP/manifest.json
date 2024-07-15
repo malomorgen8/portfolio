@@ -1,0 +1,75 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"Matija Lazovic"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.23"
+			],
+			"dash": [
+				"github:bridge-core/dash-compiler#8fa35c73292f6382747d0f411fca26431a6d2c8e"
+			]
+		}
+	},
+	"header": {
+		"name": "30.06",
+		"description": "developer test 2",
+		"min_engine_version": [
+			1,
+			21,
+			0
+		],
+		"uuid": "dca31b1f-1a71-4644-8c63-9516c5a6f466",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "10bf2e8d-7083-4b36-aec9-9916573d6e6e",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "b8c1c1c0-1985-4115-b0c4-912b08884447",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "5bf937a7-05e2-4079-9dfc-c0886d763d06",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "1.0.0"
+		},
+		{
+			"module_name": "@minecraft/server-gametest",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "1.0.0"
+		}
+	]
+}

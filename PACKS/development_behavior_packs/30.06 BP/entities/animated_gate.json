@@ -1,0 +1,125 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "bridge:animated_gate",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"open": "animation.animated_gate.open",
+				"close": "animation.animated_gate.close",
+				"opened": "animation.animated_gate.opened",
+				"closed": "animation.animated_gate.closed"
+			},
+			"scripts": {
+				"animate": [
+					"closed",
+					"open",
+					"opened",
+					"close"
+				]
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"custom_gate"
+				]
+			},
+			"minecraft:health": {
+				"value": 20,
+				"max": 20
+			},
+			"minecraft:collision_box": {
+				"width": 2,
+				"height": 2
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:navigation.walk": {
+				"can_path_over_water": true,
+				"can_walk": true,
+				"can_jump": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_mobs": false
+			},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:behavior.nearest_attackable_target": {
+				"priority": 2,
+				"entity_types": {
+					"max_dist": 6,
+					"filters": {
+						"test": "is_family",
+						"subject": "other",
+						"value": "player"
+					}
+				},
+				"must_see": true,
+				"within_radius": 6,
+				"set_persistent": true,
+				"scan_interval": 10,
+				"must_reach": false,
+				"attack_interval": 1,
+				"reselect_targets": true,
+				"must_see_forget_duration": 1,
+				"target_search_height": 4
+			},
+			"minecraft:on_target_acquired": {
+				"event": "open_gate",
+				"target": "self"
+			},
+			"minecraft:on_target_escape": {
+				"event": "close_gate",
+				"target": "self"
+			}
+		},
+		"events": {
+			"open_gate": {
+				"sequence": [
+					{
+						"queue_command": {
+							"command": [
+								"playsound open.fence_gate @p"
+							],
+							"target": "self"
+						}
+					},
+					{
+						"queue_command": {
+							"command": [
+								"playanimation @s open opened",
+								"say Opening gate"
+							],
+							"target": "self"
+						}
+					}
+				]
+			},
+			"close_gate": {
+				"queue_command": {
+					"command": [
+						"playanimation @s close",
+						"playsound close.fence_gate @p",
+						"say Closing gate"
+					],
+					"target": "self"
+				}
+			}
+		}
+	}
+}

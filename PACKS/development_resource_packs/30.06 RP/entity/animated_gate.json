@@ -1,0 +1,38 @@
+{
+	"format_version": "1.20.80",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "bridge:animated_gate",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/animated_gate"
+			},
+			"geometry": {
+				"default": "geometry.animated_gate"
+			},
+			"render_controllers": [
+				"controller.render.animated_gate"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			},
+			"animations": {
+				"open": "animation.animated_gate.open",
+				"close": "animation.animated_gate.close",
+				"opened": "animation.animated_gate.opened",
+				"closed": "animation.animated_gate.closed"
+			},
+			"scripts": {
+				"animate": [
+					"closed",
+					"open",
+					"opened",
+					"close"
+				]
+			}
+		}
+	}
+}
