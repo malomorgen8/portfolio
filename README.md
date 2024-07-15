@@ -1,0 +1,1 @@
+Packs - minecraft animated gate project , packs are supposed to be placed in com.mojang folder (default path: C:\Users\User\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang)
